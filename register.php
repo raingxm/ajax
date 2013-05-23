@@ -55,7 +55,8 @@
 			var mes = myXmlHttpRequest.responseText;
 			//使用 eval函数将mes字串转成相应的对象
 			var mes_obj = eval("("+mes+")");
-			$('myres').value = mes_obj.res;
+			//取出第一组信息的res
+			$('myres').value = mes_obj[1].id;
 		}
 	}
 	
