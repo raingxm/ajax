@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
 <title>用户注册</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /> 
@@ -52,19 +52,10 @@
 		//我要取出从registerProcess.php页面返回的数据
 		if(myXmlHttpRequest.readyState == 4){
 			
-			//取出值，根据返回信息的格式定. text
-			//window.alert("服务器返回"+myXmlHttpRequest.responseText);
-			//$("myres").value = myXmlHttpRequest.responseText;
-			
-			//看看如何取出xml格式数据
-			//window.alert(myXmlHttpRequest.responseXML);
-			
-			//获取mes节点
-			var mes = myXmlHttpRequest.responseXML.getElementsByTagName("mes");
-			//var mes = myXmlHttpRequest.responseXML.getElementsByTagName("mes")[0].childNodes[0].nodeValue;
-			//取出mes节点值
-			//var mes_val =  mes[0].childNodes[0].nodeValue;
-			window.alert(mes.length);
+			var mes = myXmlHttpRequest.responseText;
+			//使用 eval函数将mes字串转成相应的对象
+			var mes_obj = eval("("+mes+")");
+			$('myres').value = mes_obj.res;
 		}
 	}
 	
