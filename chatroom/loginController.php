@@ -7,6 +7,10 @@
 	//判断（因为没有用户表）
 	if($pwd == "123"){
 	
+		//把该用户的名字保存到session中
+		session_start();
+		$_SESSION['loginuser'] = $loginUser;
+		
 		//跳转到好友列表界面
 		header("Location: friendList.php");
 		
