@@ -25,7 +25,7 @@
 		var myXmlHttpRequest = getXmlHttpObject();
 		if(myXmlHttpRequest){
 			
-			var url = "SendMessage.php";
+			var url = "SendMessageController.php";
 			//这里新的知识点，js中如何使用php数据
 			//如何在这里得到发送人的名字??
 			var data = "con="+$("con").value+"&getter=<?php echo $username;?>&sender=<?php echo $loginuser; ?>";

@@ -1,22 +1,21 @@
-<?php
-
-	//½ÓÊÕÓÃ»§Ãû×ÖºÍÃÜÂë
+ï»¿<?php
+	//æŽ¥æ”¶ç”¨æˆ·åå­—å’Œå¯†ç 
 	$loginUser = $_POST['username'];
 	$pwd = $_POST['passwd'];
 	
-	//ÅÐ¶Ï£¨ÒòÎªÃ»ÓÐÓÃ»§±í£©
+	//åˆ¤æ–­ï¼ˆå› ä¸ºæ²¡æœ‰ç”¨æˆ·è¡¨ï¼‰
 	if($pwd == "123"){
 	
-		//°Ñ¸ÃÓÃ»§µÄÃû×Ö±£´æµ½sessionÖÐ
+		//æŠŠè¯¥ç”¨æˆ·çš„åå­—ä¿å­˜åˆ°sessionä¸­
 		session_start();
 		$_SESSION['loginuser'] = $loginUser;
 		
-		//Ìø×ªµ½ºÃÓÑÁÐ±í½çÃæ
+		//è·³è½¬åˆ°å¥½å‹åˆ—è¡¨ç•Œé¢
 		header("Location: friendList.php");
 		
 	}else{
 		
-		//²»ºÏ·¨
+		//ä¸åˆæ³•
 		header("Location: login.php");
 	}
 	
