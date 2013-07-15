@@ -61,7 +61,8 @@
 				}
 			}
 			
-			myXmlHttpRequest.send(data);
+			//发送信息
+			myXmlHttpRequest.send(data);				
 		}
 	}
 	
@@ -94,6 +95,10 @@
 			
 			//正式发送
 			myXmlHttpRequest.send(data);
+			
+			//把你的话显示到聊天框框
+			$('mycons').value += "我对<?php echo $username; ?>说： "+$('con').value+
+				"  "+new Date().toLocaleString()+"\r\n";
 		}
 		$('con').value = "";
 	}
